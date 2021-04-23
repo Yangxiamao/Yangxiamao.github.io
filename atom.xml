@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-17T06:32:48.397Z</updated>
+  <updated>2021-04-23T12:06:58.325Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TiKV-Committer-的最快养成方法</title>
+    <link href="http://example.com/2021/04/23/TiKV-Committer-%E7%9A%84%E6%9C%80%E5%BF%AB%E5%85%BB%E6%88%90%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/2021/04/23/TiKV-Committer-%E7%9A%84%E6%9C%80%E5%BF%AB%E5%85%BB%E6%88%90%E6%96%B9%E6%B3%95/</id>
+    <published>2021-04-23T10:38:03.000Z</published>
+    <updated>2021-04-23T12:06:58.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+    <category term="创造了不起" scheme="http://example.com/tags/%E5%88%9B%E9%80%A0%E4%BA%86%E4%B8%8D%E8%B5%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>来到无聊的世界</title>
