@@ -57,12 +57,12 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Rechercher"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -94,7 +94,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>刻耳柏洛斯是希腊神话中看守冥界入口的恶犬，它允许每一个死者的灵魂进入冥界，但不让任何人出去，同时也不允许活人进入。</p>
-<p>纽约大学石溪分校的 Nguyen Phong Hoang 和多伦多大学的 Arian Akhavan Niaki 等人，建立了一个名为 GFWatch 的网络平台，对中国网络长城（俗称 GFW）的 DNS 审查系统进行了探测和实验，最后写出了一篇论文发表在历史悠久的 USENIX（高等计算系统协会）上。文章名为《How Great is the Great Firewall ?  Measuring China’s DNS Censorship》，您可通过链接 <a target="_blank" rel="noopener" href="https://www.usenix.org/system/files/sec21-hoang.pdf">https://www.usenix.org/system/files/sec21-hoang.pdf</a> 获得论文原文。</p>
+<p>纽约大学石溪分校的 Nguyen Phong Hoang 和多伦多大学的 Arian Akhavan Niaki 等人，建立了一个名为 GFWatch 的网络平台，对中国网络长城（俗称 GFW）的 DNS 审查系统进行了探测和实验，最后写出了一篇论文发表在历史悠久的 USENIX（高等计算系统协会）的相关会议上。文章名为《How Great is the Great Firewall ?  Measuring China’s DNS Censorship》，您可通过链接 <a target="_blank" rel="noopener" href="https://www.usenix.org/system/files/sec21-hoang.pdf">https://www.usenix.org/system/files/sec21-hoang.pdf</a> 获得论文原文。</p>
 <p>在 GFWatch 工作的九个月时间里，它测试了5.34 亿个域名。论文展示了一组触目惊心的数据：至少有 31.1 万个域名被 GFW 的 DNS 过滤系统干扰。并且 GFW 还主动出击，在世界范围内污染了公共 DNS 解析服务（pub- lic DNS resolvers）中至少 7.7 万个域名的数据，其中包括谷歌和 Cloudflare 的 DNS resolvers。</p>
 <p>他们在论文中说：</p>
 <p>“These techniques will not only help public DNS resolvers and other DNS-related services to sanitize tainted records , but can also assist future development of circumvention tools tobypass the GFW’s DNS censorship .”</p>
@@ -105,7 +105,7 @@
 <p>举一个例子，如果我们要访问域名 <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> ，首先要通过 DNS 查出它的IP地址 183.232.231.172。下图是 DNS 查询的一个简单示意图。</p>
 <img src="/2021/09/30/%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%88%BB%E8%80%B3%E6%9F%8F%E6%B4%9B%E6%96%AF-GFW%E7%9A%84DNS%E5%AE%A1%E6%9F%A5%E7%B3%BB%E7%BB%9F/DNS1.png" class="">
 
-<p>论文中提到，由于 GFW 是一个通路的（on-path）/人在侧面（man-on- the-side）的系统 ，所以它没办法通过修改或者简单丢弃互联网上传输的那些被封锁的域名的 DNS 查询响应。但是由于 DNS 使用无状态、未加密的 UDP 协议进行传输，所以 GFW 可以通过可以实时监测互联网上的流量，当在用户的 DNS 查询中检测到受审查的内容时，注入错误的响应。</p>
+<p>论文中提到，由于 GFW 是一个通路的（on-path）/旁观者（man-on- the-side）的系统 ，所以它没办法通过修改或者简单丢弃互联网上传输的那些被封锁的域名的 DNS 查询响应。但是由于 DNS 使用无状态、未加密的 UDP 协议进行传输，所以 GFW 可以通过可以实时监测互联网上的流量，当在用户的 DNS 查询中检测到受审查的内容时，注入错误的响应。</p>
 <p>由于 GFW 的相关设备通常离客户端更近（就物理/网络距离而言），所以被检测的响应通常会比合法的响应更早到达，从而达到让用户无法获得正确的域名的 DNS 的目的。</p>
 <img src="/2021/09/30/%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%88%BB%E8%80%B3%E6%9F%8F%E6%B4%9B%E6%96%AF-GFW%E7%9A%84DNS%E5%AE%A1%E6%9F%A5%E7%B3%BB%E7%BB%9F/dnsposion.png" class="">
 
@@ -119,7 +119,7 @@
 <p>同时，GFWatch 还被设计来收集统计 GFW 返回的虚假 IP 地址。</p>
 <p>接下来我们来看看 GFWatch 的实验和探测手段。</p>
 <p>GFWatch 的主要探测器位于没有 DNS 审查制度的美国，从这台机器发送 DNS 查询消息前往位于中国的两台主机。但是位于中国的那两台主机并没有 DNS 解析能力，因此，主探测器的任何 DNS 响应都应该是来自 GFW。</p>
-<p>由于 GFWatch 被设计为使用 UDP 进行探测，而UDP是一个无状态和不可靠的协议，数据包可能会由于不受控制的因素（例如，网络拥堵）而丢失。为了尽量减少这些因素对数据收集的影响，GFWatch 每天至少对每个域名进行三次测试。</p>
+<p>因为 DNS query 使用 UDP，所以 GFWatch 也被设计为使用 UDP 进行探测。而UDP是一个无状态和不可靠的协议，数据包可能会由于不受控制的因素（例如网络拥堵）而丢失。为了尽量减少这些因素对数据收集的影响，GFWatch 每天至少对每个域名进行三次测试。</p>
 <img src="/2021/09/30/%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%88%BB%E8%80%B3%E6%9F%8F%E6%B4%9B%E6%96%AF-GFW%E7%9A%84DNS%E5%AE%A1%E6%9F%A5%E7%B3%BB%E7%BB%9F/US.png" class="">
 
 <p>很妙的一个实验方法！一个优秀的猎手往往以猎物的姿态存在。虽然你耗费了电费和带宽，但是你可是钓上了 GFW 这条大鱼啊！</p>
@@ -221,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/30/%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%88%BB%E8%80%B3%E6%9F%8F%E6%B4%9B%E6%96%AF-GFW%E7%9A%84DNS%E5%AE%A1%E6%9F%A5%E7%B3%BB%E7%BB%9F/" data-id="cku6eef9u0000nxsf1m0jg42y" data-title="互联网的刻耳柏洛斯:GFW的DNS审查系统" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/09/30/%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%88%BB%E8%80%B3%E6%9F%8F%E6%B4%9B%E6%96%AF-GFW%E7%9A%84DNS%E5%AE%A1%E6%9F%A5%E7%B3%BB%E7%BB%9F/" data-id="cku6eef9u0000nxsf1m0jg42y" data-title="互联网的刻耳柏洛斯:GFW的DNS审查系统" class="article-share-link">Partager</a>
       
       
       
@@ -300,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/23/TiKV-Committer-%E7%9A%84%E6%9C%80%E5%BF%AB%E5%85%BB%E6%88%90%E6%96%B9%E6%B3%95/" data-id="cknu6nwqi00000iq5cx7ddik3" data-title="TiKV-Committer-的最快养成方法" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/04/23/TiKV-Committer-%E7%9A%84%E6%9C%80%E5%BF%AB%E5%85%BB%E6%88%90%E6%96%B9%E6%B3%95/" data-id="cknu6nwqi00000iq5cx7ddik3" data-title="TiKV-Committer-的最快养成方法" class="article-share-link">Partager</a>
       
       
       
@@ -351,7 +351,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/04/17/%E6%9D%A5%E5%88%B0%E6%97%A0%E8%81%8A%E7%9A%84%E4%B8%96%E7%95%8C/" data-id="cknldbw9k0006moq59c2a6mh9" data-title="来到无聊的世界" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/04/17/%E6%9D%A5%E5%88%B0%E6%97%A0%E8%81%8A%E7%9A%84%E4%B8%96%E7%95%8C/" data-id="cknldbw9k0006moq59c2a6mh9" data-title="来到无聊的世界" class="article-share-link">Partager</a>
       
       
       
@@ -404,7 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/03/%E5%9B%A0%E4%B8%BA%E4%BA%BA%E7%94%9F%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/" data-id="cknldbw9i0004moq56qt4beus" data-title="因为人生是没有边界的" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/03/%E5%9B%A0%E4%B8%BA%E4%BA%BA%E7%94%9F%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/" data-id="cknldbw9i0004moq56qt4beus" data-title="因为人生是没有边界的" class="article-share-link">Partager</a>
       
       
       
@@ -488,7 +488,7 @@
 <li>群组搜索机器人<br>找到您感兴趣的群组、频道和机器人<br><a target="_blank" rel="noopener" href="https://t.me/hao1234bot">https://t.me/hao1234bot</a>  </li>
 </ol>
 <h2 id="感慨"><a href="#感慨" class="headerlink" title="感慨"></a>感慨</h2><p>Telegram这个充满理想主义的软件不接受外部投资（不需要向任何股东负责），目前也不通过广告盈利，至今没有向第三方披露过一个字节的用户私人数据。Telegram 一直在默默地践行一个理念：这个星球上的每个人都享有自由的权利（Everyone on the planet has a right to be free.）。这在这个充斥着贩卖隐私、充值变强的互联网，显得尤为珍贵。不禁让人再次想起互联网的精神──一个把世界各地的人们联系起来的网络。<br>感谢那些无私奉献的开发者们，愿他们身体健康，万事顺利~  </p>
-<p>如果您发现该文章有错误，或者您想和我交朋友，您都可以通过Telegram或者推特与我取得联系，我的tg链接是 <a target="_blank" rel="noopener" href="https://t.me/PeterYang6">https://t.me/PeterYang6</a> ，我的推特是 <a target="_blank" rel="noopener" href="https://twitter.com/real_Peter_Yang">https://twitter.com/real_Peter_Yang</a> 。</p>
+<p>如果您发现该文章有错误，或者您想和我交朋友，您都可以通过Telegram或者推特与我取得联系，我的tg链接是 <a target="_blank" rel="noopener" href="https://t.me/real_Peter_Yang">https://t.me/real_Peter_Yang</a> ，我的推特是 <a target="_blank" rel="noopener" href="https://twitter.com/real_Peter_Yang">https://twitter.com/real_Peter_Yang</a> 。</p>
 <h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><ul>
 <li>telegram官网：<a target="_blank" rel="noopener" href="https://telegram.org/">https://telegram.org/</a>  </li>
 <li>wikipedia：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Telegram">https://zh.wikipedia.org/wiki/Telegram</a>  </li>
@@ -499,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/23/Telegram%E6%8C%87%E5%8D%97/" data-id="cknldbw9h0003moq5agaf45e1" data-title="Telegram指南" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/01/23/Telegram%E6%8C%87%E5%8D%97/" data-id="cknldbw9h0003moq5agaf45e1" data-title="Telegram指南" class="article-share-link">Partager</a>
       
       
       
@@ -565,7 +565,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/28/2020%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" data-id="cknldbw990000moq5e9xnfon2" data-title="2020年终总结" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2020/12/28/2020%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" data-id="cknldbw990000moq5e9xnfon2" data-title="2020年终总结" class="article-share-link">Partager</a>
       
       
       
@@ -590,7 +590,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/" rel="tag">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9B%E9%80%A0%E4%BA%86%E4%B8%8D%E8%B5%B7/" rel="tag">创造了不起</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag">年终总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
     </div>
@@ -600,7 +600,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/%E5%88%9B%E9%80%A0%E4%BA%86%E4%B8%8D%E8%B5%B7/" style="font-size: 10px;">创造了不起</a> <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年终总结</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 20px;">杂谈</a>
     </div>
@@ -609,7 +609,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
     </div>
@@ -619,7 +619,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -657,7 +657,7 @@
     <div id="footer-info" class="inner">
       
       &copy; 2021 Peter Yang<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
