@@ -1,0 +1,62 @@
+baseURL = 'https://yangxiamao.github.io/'
+languageCode = 'zh-cn'
+title = "Peter Yang's Blog"
+theme = 'PaperMod'
+defaultContentLanguage = 'zh'
+
+[params]
+  author = 'Peter Yang'
+  description = '哲学、技术与生活'
+  showReadingTime = true
+  showShareButtons = true
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  homeInfoParams = { Title = "Peter Yang's Blog", Content = "哲学、技术与生活" }
+
+  # 搜索功能配置
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:yangxiaomao6@gmail.com'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/Yangxiamao'
+
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/index.xml'
+
+[menu]
+  [[menu.main]]
+    name = '首页'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = '归档'
+    url = '/archives/'
+    weight = 2
+  [[menu.main]]
+    name = '标签'
+    url = '/tags/'
+    weight = 3
+  [[menu.main]]
+    name = '搜索'
+    url = '/search/'
+    weight = 4
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'

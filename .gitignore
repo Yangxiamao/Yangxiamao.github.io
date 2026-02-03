@@ -1,0 +1,15 @@
+# Hugo 生成文件
+public/
+resources/_gen/
+
+# 构建锁文件
+.hugo_build.lock
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
